@@ -1,4 +1,44 @@
 // A special array class that can only store the number of items specified by the `limit` argument
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+
+  addToTail(value) {
+    const anoth = {
+      next : null,
+      value : value
+    }
+    if (this.head = null) {
+      this.head = this.anoth;
+      this.tail = this.anoth;
+    } else {
+      this.tail.next = anoth;
+      this.tail = anoth;
+    }
+  }
+
+  guillotine() {
+    const fix = this.head
+    if (this.head === null) return;
+    if (this.head.next === null) {
+      this.head = null;
+      this.tail = null;
+      return fix.value;
+    } 
+  }
+
+  whatLiesWithin(value) {
+    if (this.head === null) return false;
+      let searchList = function(instance) {
+        if (instance.value === value) return true;
+        if (instance.next === null) return false;
+        return searchList(instance.next);
+      }
+      return searchList(this.head);
+  }
+}
 class LimitedArray {
   constructor(limit) {
     // You should not be directly accessing this array from your hash table methods
